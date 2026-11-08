@@ -271,6 +271,84 @@ def get_simulated_diagnosis(
             "is_simulated": True
         }
 
+    elif "areca" in crop_lower or "betel" in crop_lower:
+        return {
+            "crop_identified": "Areca Nut / Betel Nut (Areca catechu)",
+            "health_status": "Early Warning",
+            "primary_diagnosis": "Kole-roga (Fruit Rot / Mahali) & Potassium Hunger",
+            "scientific_name": "Phytophthora meadii",
+            "confidence_percentage": 94,
+            "severity_level": "Moderate",
+            "early_warning_signals": [
+                "Water-soaked dark lesions near the calyx (cup) of tender buttons / young nuts",
+                "Premature shedding (dropping) of tender nuts onto the ground",
+                "Mild marginal yellowing on lower palm fronds indicating potassium starvation"
+            ],
+            "root_causes": [
+                f"Continuous monsoon drizzle with high relative humidity ({weather_info.get('humidity_percent', 80)}%)",
+                "Microclimate moisture saturation trapped within densely spaced areca palm canopy",
+                "Inadequate drainage causing root water stagnation"
+            ],
+            "fertilizer_prescription": {
+                "recommended_fertilizer": "1% Bordeaux Mixture Spray + Potassium Sulphate (0:0:50) + Borax",
+                "dosage_per_acre": "1% Bordeaux mixture (1 kg Copper Sulfate + 1 kg quicklime in 100L water) covering all bunches + 140g Potash and 15g Borax per palm",
+                "application_method": "Crown and Bunch Foliar Spray + Soil Ring Application",
+                "application_timing": "Immediately during a break in rain showers",
+                "frequency": "2 sprays: 1st before heavy monsoon, 2nd 40 days later"
+            },
+            "organic_eco_friendly_alternatives": [
+                "Trichoderma harzianum enriched Neem cake (2 kg per palm) applied around the root basin",
+                "Bio-protective covering of bunches with breathable poly/aerated covers (Kotte tying)",
+                "Fermented sour buttermilk + copper foil aged liquid drenching"
+            ],
+            "optimistic_farming_tips": [
+                "Dig deep inter-row drainage trenches (50 cm depth) to rapidly evacuate excess rain runoff from the root zone",
+                "Tying covers (Kotte) over developing areca bunches completely shields them from heavy downpours and spore deposition",
+                "Adequate potassium and boron nutrition strengthens the nut stalk attachment, drastically cutting premature nut drop and increasing dry kernel weight!"
+            ],
+            "summary_for_farmer_audio": "Early Koleroga fruit rot and potassium shortage noticed on your areca nut palms. Spray 1% Bordeaux mixture onto the bunches and apply potash to prevent nut dropping and maximize harvest weight.",
+            "is_simulated": True
+        }
+
+    elif "coconut" in crop_lower:
+        return {
+            "crop_identified": "Coconut (Cocos nucifera)",
+            "health_status": "Early Warning",
+            "primary_diagnosis": "Bud Rot Incipient Stage & Boron Deficiency (Crown Choke)",
+            "scientific_name": "Phytophthora palmivora",
+            "confidence_percentage": 92,
+            "severity_level": "Low to Moderate",
+            "early_warning_signals": [
+                "Discoloration and water-soaked dull brown spots on the base of the spear (central spindle leaf)",
+                "Irregular crinkling or hook-like bending of emerging leaflet tips (Boron deficiency)",
+                "Yellow to bronze freckling on the margins of older lower fronds (Potassium deficit)"
+            ],
+            "root_causes": [
+                "High relative humidity combined with persistent rain trapped in the crown axils",
+                "Sandy or leached soils with low micronutrient retention capacity",
+                "Damage from rhinoceros beetle creating entry wounds for fungal zoospores"
+            ],
+            "fertilizer_prescription": {
+                "recommended_fertilizer": "1% Bordeaux Paste / Copper Oxychloride + Custom Coconut Palm Nutrient Mix (1.3 kg MOP + 50g Borax + 500g Magnesium Sulphate per palm)",
+                "dosage_per_acre": "Apply nutrient mix in a 1.8-meter radius circular trench around each palm base and incorporate with moist soil",
+                "application_method": "Crown Cleaning with Fungicide Paste + Circular Basin Soil Application",
+                "application_timing": "Early morning after clearing old fibrous stipules from palm crown",
+                "frequency": "Biannual application (Pre-monsoon and Post-monsoon)"
+            },
+            "organic_eco_friendly_alternatives": [
+                "Root feeding with Pseudomonas fluorescens (10 ml in 100 ml water in active root tip)",
+                "Application of 50 kg well-rotted farmyard manure (FYM) + 5 kg Neem cake per palm",
+                "Filling uppermost leaf axils with a mixture of sand and Neem cake (1:1) to deter beetles"
+            ],
+            "optimistic_farming_tips": [
+                "Grow green manure cover crops (Sunnhemp or Cowpea) in the palm basins and incorporate them at flowering to multiply soil earthworms",
+                "Keep the palm crown completely clean of decaying debris to ensure unobstructed sunlight on emerging central fronds",
+                "Supplying regular potassium and boron will increase copra oil content, prevent button shedding, and yield larger, heavier nuts!"
+            ],
+            "summary_for_farmer_audio": "Early Bud Rot symptoms and boron deficiency identified on your coconut palms. Clean the crown, apply copper fungicide to the central spear, and feed balanced potassium and borax in the root basin for heavy nut yields.",
+            "is_simulated": True
+        }
+
     else:
         # Generic optimistic crop report
         return {

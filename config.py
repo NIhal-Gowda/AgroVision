@@ -17,7 +17,9 @@ SUPPORTED_CROPS = [
     "Tea",
     "Apple",
     "Grapes",
-    "Groundnut / Peanut"
+    "Groundnut / Peanut",
+    "Areca Nut (Betel Nut)",
+    "Coconut"
 ]
 
 SOIL_TYPES = [
@@ -57,5 +59,7 @@ CROP_NPK_REQUIREMENTS = {
     "Maize (Corn)": {"N": 48, "P": 24, "K": 20, "organic_base": "Poultry manure 1.5 tons/acre"},
     "Cotton": {"N": 35, "P": 18, "K": 18, "organic_base": "Castor cake 400 kg/acre"},
     "Chilli / Pepper": {"N": 40, "P": 20, "K": 30, "organic_base": "Neem cake 250 kg/acre"},
-    "Soybean": {"N": 12, "P": 32, "K": 16, "organic_base": "Rhizobium inoculation + Compost"}
+    "Soybean": {"N": 12, "P": 32, "K": 16, "organic_base": "Rhizobium inoculation + Compost"},
+    "Areca Nut (Betel Nut)": {"N": 50, "P": 20, "K": 70, "organic_base": "Compost 12 kg/palm + Neem cake 1 kg/palm"},
+    "Coconut": {"N": 35, "P": 22, "K": 84, "organic_base": "50 kg Farmyard Manure (FYM) + Sunnhemp green manure/palm"}
 }
